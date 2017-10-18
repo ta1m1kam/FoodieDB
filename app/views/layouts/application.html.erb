@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("FoodieDB", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li><%= link_to("FoodieDBとは", "/about") %></li>
+        <li><%= link_to("投稿一覧", "/posts/index") %></li>
+        <li><%= link_to("新規投稿", "/posts/new") %></li>
+      </ul>
+    </header>
+
     <%= yield %>
   </body>
 </html>
