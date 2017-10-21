@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -50,6 +51,16 @@ class PostsController < ApplicationController
     @post.destroy
     flash[:notice] = "#{@post.content}の削除が完了しました"
     redirect_to("/posts/index")
+  end
+
+
+  # このメソッドはURLからアクセスした際にcurrent_userとpostuserが一致しなければエラー
+  def ensure_correct_user
+    @post = Post.find_by(id: params[:id])
+    if @post.user_id != @current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to("/posts/index")
+    end
   end
 
 end

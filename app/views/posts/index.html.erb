@@ -2,6 +2,12 @@
   <div class="container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
+        <div class="post-left">
+          <%= gravatar_post_for post.user %>
+        </div>
+        <div class="post-right">
+          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+        </div>
         <%= link_to(post.content, "/posts/#{post.id}") %>
       </div>
     <% end %>

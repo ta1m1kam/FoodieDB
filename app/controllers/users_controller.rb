@@ -76,6 +76,7 @@ class UsersController < ApplicationController
     redirect_to("/login")
   end
 
+  # current_userとparams[:id]一致しないとURLアクセスしても権限がなくなるメソッド
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
       flash[:notice] = "権限がありません"
