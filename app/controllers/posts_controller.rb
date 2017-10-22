@@ -19,7 +19,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(
       content: params[:content],
-      user_id: @current_user.id
+      user_id: @current_user.id,
+      picture: params[:picture]
     )
 
     if @post.save
@@ -40,7 +41,7 @@ class PostsController < ApplicationController
     @post.content = params[:content]
 
     if @post.save
-      flash[:notice] = "#{post.content}の編集が完了しました"
+      flash[:notice] = "#{@post.content}の編集が完了しました"
       redirect_to("/posts/index")
     else
       render("posts/edit")

@@ -8,7 +8,7 @@
             <%= message %>
           </div>
           <% end %>
-          <%= form_tag("/posts/create", {multipart:true}) do %>
+          <%= form_tag("/posts/create") do %>
             <textarea name="content"></textarea>
             <input name="picture" type="file">
             <input type="submit" value="投稿">

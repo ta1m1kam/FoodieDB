@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:name],
         email: params[:email],
-        image_name: "gutty_def.png",
         password: params[:password]
       )
     if @user.save
@@ -39,11 +38,11 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
 
-    if params[:image]
-      @user.image_name = "#{@user.id}.jpg"
-      image = params[:image]
-      File.write("public/user_images/#{@user.image_name}", image.read)
-    end
+    # if params[:image]
+    #   @user.image_name = "#{@user.id}.jpg"
+    #   image = params[:image]
+    #   File.write("public/user_images/#{@user.image_name}", image.read)
+    # end
 
     if @user.save
       flash[:notice] = "ユーザー情報を編集しました"

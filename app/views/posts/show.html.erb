@@ -8,6 +8,9 @@
       <p>
         <%= @post.content %>
       </p>
+      <span>
+        <%= image_tag @post.picture.url if @post.picture? %>
+      </span>
       <div class="post-time">
         <%= @post.created_at %>
       </div>
