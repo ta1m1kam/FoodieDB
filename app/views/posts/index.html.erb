@@ -8,9 +8,10 @@
         <div class="post-right">
           <%= link_to(post.user.name, "/users/#{post.user.id}") %>
         </div>
+        <img src="<%= "#{post.picture}" %>">
+        <br>
         <%= link_to(post.content, "/posts/#{post.id}") %>
         <!-- <%= image_tag post.picture.url if post.picture? %> -->
-        <img src="<%= "#{post.picture}" %>">
         <!-- <img src="/user_images/gutty_def.png"> -->
       </div>
     <% end %>

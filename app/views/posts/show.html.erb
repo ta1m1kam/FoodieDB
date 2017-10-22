@@ -5,12 +5,12 @@
         <%= gravatar_post_for @user %>
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
+      <div>
+        <%= image_tag @post.picture.url if @post.picture? %>
+      </div>
       <p>
         <%= @post.content %>
       </p>
-      <span>
-        <%= image_tag @post.picture.url if @post.picture? %>
-      </span>
       <div class="post-time">
         <%= @post.created_at %>
       </div>
