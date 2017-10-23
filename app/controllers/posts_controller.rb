@@ -20,7 +20,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       content: params[:content],
       user_id: @current_user.id,
-      picture: params[:picture]
+      picture: params[:picture],
+      star: params[:star]
     )
 
     if @post.save

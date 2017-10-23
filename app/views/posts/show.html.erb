@@ -26,6 +26,14 @@
 
       <%= @likes_count %>
 
+      <div class="evaluation-show">
+        <label id="star1">★</label>
+        <label id="star2">★</label>
+        <label id="star3">★</label>
+        <label id="star4">★</label>
+        <label id="star5">★</label>
+      </div>
+
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
@@ -35,3 +43,37 @@
     </div>
   </div>
 </div>
+
+<script>
+function starLight(){
+  star1 = document.getElementById("star1");
+  star2 = document.getElementById("star2");
+  star3 = document.getElementById("star3");
+  star4 = document.getElementById("star4");
+  star5 = document.getElementById("star5");
+
+  if(<%= @post.star %> == 1){
+    star5.style.color = "#ffcc00";
+  }else if (<%= @post.star %> == 2) {
+    star5.style.color = "#ffcc00";
+    star4.style.color = "#ffcc00";
+  }else if (<%= @post.star %> == 3) {
+    star5.style.color = "#ffcc00";
+    star4.style.color = "#ffcc00";
+    star3.style.color = "#ffcc00";
+  }else if (<%= @post.star %> == 4) {
+    star5.style.color = "#ffcc00";
+    star4.style.color = "#ffcc00";
+    star3.style.color = "#ffcc00";
+    star2.style.color = "#ffcc00";
+  }else if (<%= @post.star %> == 5) {
+    star5.style.color = "#ffcc00";
+    star4.style.color = "#ffcc00";
+    star3.style.color = "#ffcc00";
+    star2.style.color = "#ffcc00";
+    star1.style.color = "#ffcc00";
+  }
+}
+
+starLight()
+</script>
