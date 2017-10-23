@@ -22,7 +22,8 @@ class PostsController < ApplicationController
       user_id: @current_user.id,
       picture: params[:picture],
       star: params[:star],
-      food_name: params[:food_name]
+      food_name: params[:food_name],
+      address: params[:address]
     )
 
     if @post.save
