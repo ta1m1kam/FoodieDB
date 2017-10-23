@@ -1,14 +1,16 @@
 <div class="main posts-index">
-  <div class="container">
+  <div class="container-posts-index">
     <% @posts.each do |post| %>
-      <div class="posts-index-item">
+      <div class="posts-index-items">
         <div class="post-left">
           <%= gravatar_post_for post.user %>
         </div>
         <div class="post-right">
           <%= link_to(post.user.name, "/users/#{post.user.id}") %>
         </div>
-        <img src="<%= "#{post.picture}" %>">
+        <div class="post-picture">
+          <img src="<%= "#{post.picture}" %>">
+        </div>
         <br>
         <%= link_to(post.content, "/posts/#{post.id}") %>
         <!-- <%= image_tag post.picture.url if post.picture? %> -->

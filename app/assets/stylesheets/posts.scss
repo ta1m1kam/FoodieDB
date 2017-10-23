@@ -1,6 +1,29 @@
 /* posts/index ================================ */
+.container-posts-index{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-posts-index {
+  // margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
 .posts-index-item {
   padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-index-items {
+  width: 380px;
+  height: 500px;
+  padding: 20px 30px;
+  margin: 3%;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
@@ -32,6 +55,17 @@
   width: 90%;
   padding-left: 25px;
   text-align: left;
+}
+
+.post-picture{
+  text-align: center;
+}
+
+.post-picture img{
+  margin-top: 10px ;
+  padding: 0 auto;
+  width: 300px;
+  height: 300px;
 }
 
 /* posts/show ================================ */
@@ -82,6 +116,10 @@
 }
 
 // post-food-pic
+.post-food-pic {
+  text-align: center;
+}
+
 .post-food-pic img{
   margin-top: 20px;
   width: 500px;
