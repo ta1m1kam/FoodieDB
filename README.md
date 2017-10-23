@@ -21,7 +21,7 @@
 ## Usage
 ここにアクセス
 
-↓↓↓↓↓↓↓↓↓↓↓↓↓
+↓↓↓↓↓↓↓↓
 
 [FoodieDB](https://foodie-db.herokuapp.com/)
 
@@ -31,3 +31,4 @@
 - Rails 5.0.6
 - HTML
 - CSS
+- jQuery
