@@ -41,6 +41,9 @@ class PostsController < ApplicationController
     # updateアクションの中身を作成してください
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
+    @post.food_name = params[:food_name]
+    @post.star = params[:star]
+    @post.picture = params[:picture]
 
     if @post.save
       flash[:notice] = "#{@post.content}の編集が完了しました"

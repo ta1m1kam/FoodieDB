@@ -1,7 +1,7 @@
 <div class="main posts-new">
   <div class="container">
     <h1 class="form-heading">編集する</h1>
-    <%= form_tag("/posts/#{@post.id}/update") do %>
+    <%= form_tag("/posts/#{@post.id}/update", {multipart:true}) do %>
     <div class="form">
       <div class="form-body">
         <% @post.errors.full_messages.each do |message| %>
@@ -9,9 +9,22 @@
           <%= message %>
         </div>
         <% end %>
-        <textarea name="content"><%= @post.content %></textarea>
+        <input name="food_name"><%= @post.food_name %></input>
         <input name="picture" type="file">
-        <input type="submit" value="保存">
+        <textarea name="content"><%= @post.content %></textarea>
+        <div class="evaluation">
+          <input id="star1" type="radio" name="star" value="5" />
+          <label for="star1">★</label>
+          <input id="star2" type="radio" name="star" value="4" />
+          <label for="star2">★</label>
+          <input id="star3" type="radio" name="star" value="3" />
+          <label for="star3">★</label>
+          <input id="star4" type="radio" name="star" value="2" />
+          <label for="star4">★</label>
+          <input id="star5" type="radio" name="star" value="1" />
+          <label for="star5">★</label>
+        </div>
+        <input type="submit" value="投稿">
       </div>
     </div>
     <% end %>
