@@ -20,11 +20,11 @@
 }
 
 .posts-index-items {
-  width: 380px;
-  height: 440px;
+  width: 350px;
+  // height: 440px;
   padding: 20px 20px;
-  margin: 0.5%;
-  margin-top: 1.5%;
+  margin: 3%;
+  // margin-top: 1.5%;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
@@ -70,8 +70,8 @@
 .post-picture img{
   margin-top: 10px ;
   padding: 0 auto;
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
 }
 
 .food-name a{
@@ -224,4 +224,22 @@
   text-align: center;
   font-size: 12px;
   color: gray;
+}
+
+.evaluation-index label{
+  position: relative;
+  padding: 10px 0px 0;
+  color: #ffcc00;
+}
+
+.evaluation-index{
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+}
+
+#evaluation-food-name{
+  padding: 10px 10px 20px 10px;
+  font-size: 20px;
+  color: black;
 }

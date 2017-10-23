@@ -13,6 +13,11 @@
             <img src="<%= "#{post.picture}" %>">
           </a>
         </div>
+        <div class="evaluation-index">
+          <label id="eval-star">★</label><%= "#{post.star}" %>
+          <label id="evaluation-food-name"><%= "#{post.food_name}" %></label>
+          <%= "#{post.address}" %>
+        </div>
         <!-- <%= image_tag post.picture.url if post.picture? %> -->
         <!-- <img src="/user_images/gutty_def.png"> -->
       </div>
