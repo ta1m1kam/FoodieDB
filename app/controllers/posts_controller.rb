@@ -21,7 +21,8 @@ class PostsController < ApplicationController
       content: params[:content],
       user_id: @current_user.id,
       picture: params[:picture],
-      star: params[:star]
+      star: params[:star],
+      food_name: params[:food_name]
     )
 
     if @post.save

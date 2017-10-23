@@ -5,14 +5,15 @@
         <div class="post-left">
           <%= gravatar_post_for post.user %>
         </div>
-        <div class="post-right">
+        <div class="post-right post-right-name">
           <%= link_to(post.user.name, "/users/#{post.user.id}") %>
         </div>
         <div class="post-picture">
           <img src="<%= "#{post.picture}" %>">
         </div>
-        <br>
-        <%= link_to(post.content, "/posts/#{post.id}") %>
+        <p class="food-name">
+          <%= link_to(post.food_name, "/posts/#{post.id}") %>
+        </p>
         <!-- <%= image_tag post.picture.url if post.picture? %> -->
         <!-- <img src="/user_images/gutty_def.png"> -->
       </div>

@@ -57,6 +57,11 @@
   text-align: left;
 }
 
+.post-right-name a{
+  padding-left: 15px;
+  font-size: 20px;
+}
+
 .post-picture{
   text-align: center;
 }
@@ -66,6 +71,10 @@
   padding: 0 auto;
   width: 300px;
   height: 300px;
+}
+
+.food-name a{
+  font-size: 30px;
 }
 
 /* posts/show ================================ */
@@ -125,6 +134,11 @@
   width: 500px;
   height: 400px;
   border-radius: 3%;
+}
+
+.food-name{
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* posts/new ================================ */

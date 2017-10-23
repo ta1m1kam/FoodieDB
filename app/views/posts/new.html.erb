@@ -9,8 +9,9 @@
           </div>
           <% end %>
           <%= form_tag("/posts/create", {multipart:true}) do %>
-            <textarea name="content"></textarea>
+            <input name="food_name"></input>
             <input name="picture" type="file">
+            <textarea name="content"></textarea>
             <div class="evaluation">
               <input id="star1" type="radio" name="star" value="5" />
               <label for="star1">★</label>

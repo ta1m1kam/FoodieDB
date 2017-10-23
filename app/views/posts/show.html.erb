@@ -8,6 +8,9 @@
       <div class="post-food-pic">
         <%= image_tag @post.picture.url if @post.picture? %>
       </div>
+      <div class="food-name">
+        <h2><%= @post.food_name %></h2>
+      </div>
       <p>
         <%= @post.content %>
       </p>
