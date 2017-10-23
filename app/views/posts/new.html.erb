@@ -9,9 +9,9 @@
           </div>
           <% end %>
           <%= form_tag("/posts/create", {multipart:true}) do %>
-            <input name="food_name"></input>
+            <input name="food_name" placeholder="食べたものの名前を入力"></input>
             <input name="picture" type="file">
-            <textarea name="content"></textarea>
+            <textarea name="content" placeholder="食べたものについてのコメント"></textarea>
             <div class="evaluation">
               <input id="star1" type="radio" name="star" value="5" />
               <label for="star1">★</label>
