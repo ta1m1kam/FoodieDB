@@ -37,6 +37,25 @@
         <label id="star5">★</label>
       </div>
 
+
+      <br>
+      <!-- google map -->
+      <div class="map-container">
+        <div id="map"></div>
+        <style>
+          /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+          .map-container{
+            text-align: center;
+          }
+          #map {
+            margin: 0 auto;
+            margin-bottom: 50px;
+            width: 100%;
+            height: 450px;
+          }
+        </style>
+      </div>
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
@@ -47,23 +66,7 @@
 
 
   </div>
-  <!-- google map -->
-  <div class="map-container">
-    <div id="map"></div>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      .map-container{
-        text-align: center;
-      }
-      #map {
-        margin: 0 auto;
-        margin-bottom: 50px;
-        width: 75%;
-        height: 450px;
-      }
-    </style>
-  </div>
+
 </div>
 
 <script>
