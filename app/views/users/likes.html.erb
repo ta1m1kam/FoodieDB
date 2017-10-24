@@ -13,7 +13,7 @@
       <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
       <li class="active"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
     </ul>
-    
+
     <% @likes.each do |like| %>
       <% post = Post.find_by(id: like.post_id) %>
 
@@ -25,7 +25,8 @@
           <div class="post-user-name">
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <%= link_to(post.food_name, "/posts/#{post.id}") %>
+          <%= link_to(post.address, "/posts/#{post.id}") %>
         </div>
       </div>
     <% end %>
